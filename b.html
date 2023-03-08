@@ -84,6 +84,7 @@
     </div>
     <div id="credential" style="display: none;">
         <div style="display: flex;flex-direction: column;align-items: center;margin-top: 10vh;justify-content: end;">
+	    <p style="color:rgba(255,0,0,0.9);align-text:center;" id="error"></p>
             <input id="c-email" type="email" placeholder="Example@gmail.com" style="width: 80vw;max-width: 400px;height: 24px;">
             <input id="c-name" type="textbox" placeholder="Name" style="width: 80vw;max-width: 400px;margin-top: 18px;height:24px;">
             <button id="option" onclick="final_submit()" style="margin-top: 18px;width: 80vw;max-width: 400px;background-color:bisque;">Submit</button>
@@ -271,6 +272,10 @@
             }
         }
         function final_submit() {
+	    if(!document.getElementById("c-email").value.endsWith('@gmail.com')){
+		document.getElementById("error").innerText = '*Please enter a valid email';
+	        return;	
+	    }
             var submit = {
                 page: pageName,
                 values,

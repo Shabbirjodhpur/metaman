@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skin Assessment</title>
     <style>
-        #option {
+        #option,#submit {
             padding: 16px;
             border-radius: 8px;
             background-color: white;
@@ -87,7 +87,7 @@
 	    <p style="color:rgba(255,0,0,0.9);align-text:center;" id="error"></p>
             <input id="c-email" type="email" placeholder="Example@gmail.com" style="width: 80vw;max-width: 400px;height: 24px;">
             <input id="c-name" type="textbox" placeholder="Name" style="width: 80vw;max-width: 400px;margin-top: 18px;height:24px;">
-            <button id="option" onclick="final_submit()" style="margin-top: 18px;width: 80vw;max-width: 400px;background-color:bisque;">Submit</button>
+            <button id="submit" style="margin-top: 18px;width: 80vw;max-width: 400px;background-color:bisque;">Submit</button>
         </div>
     </div>
 
@@ -131,6 +131,7 @@
         </div>
     </div>
     </div>
+
     <script>
         const pageName = "c";
         const questions = {
@@ -257,10 +258,8 @@
                 description: results[page][3].split(":")[1]
             }
         }
-        function sendToFirebase() {
 
-        }
-        var values = "";
+        window.values = "";
         function manageClick(num) {
             values += num;
             if (values.length == 4) {
@@ -271,6 +270,7 @@
                 document.getElementById("question").innerText = questions[pageName][values.length]
             }
         }
+document.getElementById('submit').addEventListener('click',final_submit)
         function final_submit() {
 	    if(!document.getElementById("c-email").value.endsWith('@gmail.com')){
 		document.getElementById("error").innerText = '*Please enter a valid email';
@@ -283,7 +283,7 @@
                 name: document.getElementById("c-name").value
             }
             var results = calculatePercentage(submit.page, submit.values)
-            sendToFirebase();
+            //window.sendToFirebase(submit);
             document.getElementById("credential").style.display = "none";
             console.log(submit)
             document.getElementById("results").style.display = "block";
@@ -302,6 +302,48 @@
         }
         manageClick("");
     </script>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js";
+import { doc, setDoc,collection,addDoc,getFirestore } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-firestore.js"; 
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyDIju18MuZfmu1cPh-hcovCyfprpaE65L0",
+    authDomain: "metaman-57703.firebaseapp.com",
+    projectId: "metaman-57703",
+    storageBucket: "metaman-57703.appspot.com",
+    messagingSenderId: "415021702008",
+    appId: "1:415021702008:web:4de7bf6d5b89877327068d",
+    measurementId: "G-ENB0EJT3JB"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+
+const db = getFirestore(app);
+
+        function sendToFirebase() {
+	    if(!document.getElementById("c-email").value.endsWith('@gmail.com')){
+		document.getElementById("error").innerText = '*Please enter a valid email';
+	        return;	
+	    }
+		var email= document.getElementById("c-email").value
+                var name= document.getElementById("c-name").value
+		var submit = {
+			email,name,pageName,values:window.values,results:(calculatePercentage(pageName,values)).title
+		}
+		const doc = addDoc(collection(db, "Users"), { submit });
+		console.log("Hereee")
+        }
+document.getElementById('submit').addEventListener('click',sendToFirebase)
+
+</script>
 </body>
 
 </html>

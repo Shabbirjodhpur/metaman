@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
+<html lang="en"><head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -60,16 +58,16 @@
             margin: 8px 0px 0px 0px;
         }
     </style>
-</head>
+<script src="https://www.googletagmanager.com/gtag/js?l=dataLayer&amp;id=G-PZJQWDKHVE" async=""></script></head>
 
 <body style="background-color: cadetblue;">
     <div style="display:flex;flex-direction:row;justify-content: center;">
         <img style="width:30vw;max-width:150px;" src="./metaman.png">
     </div>
     <div id="question-wrapper" style="display:flex;flex-direction:column;align-items: center;">
-        <div id="question-container"style="width: 70vw;max-width: 500px;background: bisque;padding: 32px;border-radius: 8px;">
-            <p style="font-size: 1.5em;text-align: center;letter-spacing: 4px;font-weight: 900;border-bottom: 1px solid black;padding-bottom: 12px;">Assesment</p>
-            <p style="font-size: 1.25em;text-align: center;" id="question"></p>
+        <div id="question-container" style="width: 70vw;max-width: 500px;background: bisque;padding: 32px;border-radius: 8px;">
+            <p style="font-size: 1.5em;text-align: center;letter-spacing: 4px;font-weight: 900;border-bottom: 1px solid black;padding-bottom: 12px;">Assessment</p>
+            <p style="font-size: 1.25em;text-align: center;" id="question">Does your skin feel uncomfortable or irritated when exposed to hot or cold weather, wind, or sunlight</p>
             <div name="assessment" id="assessment">
                 <div style="display:flex;justify-content: space-evenly;margin-bottom: 32px;">
                     <button id="option" onclick="manageClick(1)">A: Everyday</button>
@@ -93,12 +91,10 @@
 
     <div id="results" style="display:none">
         <div style="display:flex;flex-direction: column;align-items: center">
-            <div
-                style="background-color: bisque;padding: 16px 0px; border-radius: 8px;margin: 0px 36px;width:90vw;max-width: 500px;">
+            <div style="background-color: bisque;padding: 16px 0px; border-radius: 8px;margin: 0px 36px;width:90vw;max-width: 500px;">
                 <div>
                     <p style="text-align: center;">Your Skin Type is</p>
-                    <p id="skin-type-title"
-                        style="text-align:center;font-size:1.4em;font-weight:700;letter-spacing:4px;"></p>
+                    <p id="skin-type-title" style="text-align:center;font-size:1.4em;font-weight:700;letter-spacing:4px;"></p>
                     <p id="skin-type-description" style="text-align: center;margin: 16px 32px;"></p>
                 </div>
                 <hr style="border: 0.1px solid black;">
@@ -116,7 +112,7 @@
                                     <a href="http://wa.me/918712169379" style="width: 100%;margin: 16px;padding: 6px;background-color: lightgreen;border: 1px solid black;border-radius: 8px;color: black;display: flex;flex-direction: column;justify-content: center;align-items: center;text-decoration: none;"><button style="background-color: transparent;border: 0px;font-size: 1em;">Buy Now</button></a>
                             </div>
                         </div>
-                        <div class="card-wrapper">
+                        <!-- <div class="card-wrapper">
                             <div class="card">
                                 <img class="product-image" id="product2-image" alt="" srcset="">
                                 <p class="product-name" id="product2-name">Metaman</p>
@@ -124,13 +120,13 @@
                                     description description description description description description </p>
                                     <a href="http://wa.me/918712169379" style="width: 100%;margin: 16px;padding: 6px;background-color: lightgreen;border: 1px solid black;border-radius: 8px;color: black;display: flex;flex-direction: column;justify-content: center;align-items: center;text-decoration: none;"><button style="background-color: transparent;border: 0px;font-size: 1em;">Buy Now</button></a>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    </div>
+    
 
     <script>
         const pageName = "a";
@@ -139,7 +135,7 @@
                 "Does your skin feel uncomfortable or irritated when exposed to hot or cold weather, wind, or sunlight",
                 "Does your skin feel tight or dry after washing with soap or other harsh cleansers?",
                 "Do you experience flare-ups of dryness, rashes, or hives in response to certain foods, medications, or environmental triggers",
-                "Have you ever been diagnosed with a skin condition such as eczema, rosacea, or psoriasis ?"
+                "Does your skin break out easily or become red and inflamed when using certain skincare products?"
             ],
             b: [
                 "Do you feel like your skin needs to be washed frequently, or that it becomes dirty or oily quickly?",
@@ -162,15 +158,15 @@
         }
         const results = {
             a: [
-                "Mild sensitivity: You may experience occasional mild irritation, redness, or dryness in response to certain skincare products or environmental factors like cold weather or wind.",
-                "Moderate sensitivity: You may experience more frequent or persistent skin irritation, redness, itching, or dryness in response to skincare products, sun exposure, or other environmental factors.",
-                "Severe sensitivity: You may experience intense or painful skin reactions, including swelling, blistering, or hives, in response to a wide range of stimuli, including skincare products, detergents, fabrics, and foods.",
-                "Allergic sensitivity: You may experience an immune response to specific allergens, resulting in symptoms like rash, hives, itching, or swelling. In some cases, these reactions can be severe or life-threatening."
+                "Mild sensitive: You may experience occasional mild irritation, redness, or dryness in response to certain skincare products or environmental factors like cold weather or wind.",
+                "Moderate sensitive: You may experience more frequent or persistent skin irritation, redness, itching, or dryness in response to skincare products, sun exposure, or other environmental factors.",
+                "Severe sensitive: You may experience intense or painful skin reactions, including swelling, blistering, or hives, in response to a wide range of stimuli, including skincare products, detergents, fabrics, and foods.",
+                "Allergic sensitive: You may experience an immune response to specific allergens, resulting in symptoms like rash, hives, itching, or swelling. In some cases, these reactions can be severe or life-threatening."
             ],
             b: [
-                "Mild oiliness: Refers to skin that appears slightly shiny or greasy, especially in the T-zone (forehead, nose, and chin), and may have some enlarged pores.",
-                "Moderate oiliness: Refers to skin that appears noticeably shiny or greasy, with larger or more visible pores, and may have occasional breakouts or blackheads.",
-                "Severe oiliness: Refers to skin that appears very shiny or greasy, with large, visible pores, frequent breakouts or blackheads, and may feel thick or heavy to the touch.",
+                "Mild oily: Refers to skin that appears slightly shiny or greasy, especially in the T-zone (forehead, nose, and chin), and may have some enlarged pores.",
+                "Moderate oily: Refers to skin that appears noticeably shiny or greasy, with larger or more visible pores, and may have occasional breakouts or blackheads.",
+                "Severe oily: Refers to skin that appears very shiny or greasy, with large, visible pores, frequent breakouts or blackheads, and may feel thick or heavy to the touch.",
                 "Extremely oily skin: Refers to skin that is extremely oily and prone to frequent breakouts, blackheads, or other forms of acne, and may require medical attention or prescription medication.It's important to note that everyone's skin is unique, and oily skin levels can vary widely between individuals. If you have concerns about your skin's oiliness, it's always a good idea to consult with a dermatologist for personalized advice and treatment recommendations."
             ],
             c: [
@@ -180,9 +176,9 @@
                 "Extremely combination skin: Refers to skin that has extreme differences between dry and oily areas, with some parts feeling extremely dry, tight, or flaky, and others feeling extremely shiny, greasy, or heavy, with frequent and severe breakouts or blackheads."
             ],
             d: [
-                "Mild dryness: Refers to skin that feels slightly dry or tight, especially after cleansing, and may have some small, flaky patches or rough areas.",
-                "Moderate dryness: Refers to skin that feels noticeably dry and tight, with larger patches of flakiness or roughness that may appear dull or lackluster.",
-                "Severe dryness: Refers to skin that feels very dry, tight, and uncomfortable, with significant flakiness or roughness that may be accompanied by redness, itching, or other irritation.",
+                "Mild dry: Refers to skin that feels slightly dry or tight, especially after cleansing, and may have some small, flaky patches or rough areas.",
+                "Moderate dry: Refers to skin that feels noticeably dry and tight, with larger patches of flakiness or roughness that may appear dull or lackluster.",
+                "Severe dry: Refers to skin that feels very dry, tight, and uncomfortable, with significant flakiness or roughness that may be accompanied by redness, itching, or other irritation.",
                 "Extremely dry skin: Refers to skin that is extremely dry and uncomfortable, with deep cracks, fissures, or bleeding that may require medical attention"
             ]
         }
@@ -193,10 +189,6 @@
                     image: './aloevera.jpeg',
                     name: 'Aloevera',
                     desc: "Aloe vera is a great natural moisturizer and can help soothe dry skin. It also contains antioxidants that can help improve skin's texture and elasticity."
-                }, {
-                    image: './papaya.jpg',
-                    name: 'Papaya',
-                    desc: "Papaya contains enzymes that can help exfoliate the skin and unclog pores, making it great for oily skin. It's also rich in antioxidants that can help prevent damage from free radicals."
                 }
             ],
             b: [
@@ -204,29 +196,17 @@
                     image: './turmeric.jpg',
                     name: 'Turmeric',
                     desc: "Turmeric has anti-inflammatory and antibacterial properties that can help reduce oiliness and prevent breakouts. It can also help brighten the skin and reduce the appearance of scars and pigmentation."
-                }, {
+                }
+            ],
+            c: [
+                {
                     image: './papaya.jpg',
                     name: 'Papaya',
                     desc: "Papaya contains enzymes that can help exfoliate the skin and unclog pores, making it great for oily skin. It's also rich in antioxidants that can help prevent damage from free radicals."
                 }
             ],
-            c: [
-                {
-                    image: './aloevera.jpeg',
-                    name: 'Aloevera',
-                    desc: "Aloe vera is a great natural moisturizer and can help soothe dry skin. It also contains antioxidants that can help improve skin's texture and elasticity."
-                }, {
-                    image: './honey.jpg',
-                    name: 'Honey',
-                    desc: "Honey is a natural humectant, which means it helps to lock in moisture. It's also rich in antioxidants and can help soothe dry, irritated skin."
-                }
-            ],
             d: [
                 {
-                    image: './aloevera.jpeg',
-                    name: 'Aloevera',
-                    desc: "Aloe vera is a great natural moisturizer and can help soothe dry skin. It also contains antioxidants that can help improve skin's texture and elasticity."
-                }, {
                     image: './honey.jpg',
                     name: 'Honey',
                     desc: "Honey is a natural humectant, which means it helps to lock in moisture. It's also rich in antioxidants and can help soothe dry, irritated skin."
@@ -272,7 +252,12 @@
         }
 document.getElementById('submit').addEventListener('click',final_submit)
         function final_submit() {
-	    if(!document.getElementById("c-email").value.endsWith('@gmail.com')){
+const validateEmail = (email) => {
+  return email.match(
+    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  );
+};
+	    if( validateEmail(document.getElementById("c-email").value) == null ){
 		document.getElementById("error").innerText = '*Please enter a valid email';
 	        return;	
 	    }
@@ -295,9 +280,9 @@ document.getElementById('submit').addEventListener('click',final_submit)
             document.getElementById('product1-name').innerText = products[pageName][0].name
             document.getElementById('product1-desc').innerText = products[pageName][0].desc
 
-            document.getElementById('product2-image').src = products[pageName][1].image
-            document.getElementById('product2-name').innerText = products[pageName][1].name
-            document.getElementById('product2-desc').innerText = products[pageName][1].desc
+            //document.getElementById('product2-image').src = products[pageName][1].image
+            //document.getElementById('product2-name').innerText = products[pageName][1].name
+            //document.getElementById('product2-desc').innerText = products[pageName][1].desc
 
         }
         manageClick("");
@@ -312,15 +297,15 @@ import { doc, setDoc,collection,addDoc,getFirestore } from "https://www.gstatic.
 
   // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyDIju18MuZfmu1cPh-hcovCyfprpaE65L0",
-    authDomain: "metaman-57703.firebaseapp.com",
-    projectId: "metaman-57703",
-    storageBucket: "metaman-57703.appspot.com",
-    messagingSenderId: "415021702008",
-    appId: "1:415021702008:web:4de7bf6d5b89877327068d",
-    measurementId: "G-ENB0EJT3JB"
-  };
+const firebaseConfig = {
+  apiKey: "AIzaSyCVQnEQ25Nmv3SXVswEQkzoabFhLhlzG-c",
+  authDomain: "metaman-4c6ad.firebaseapp.com",
+  projectId: "metaman-4c6ad",
+  storageBucket: "metaman-4c6ad.appspot.com",
+  messagingSenderId: "789816962605",
+  appId: "1:789816962605:web:df71be0d7ed663e5b052a4",
+  measurementId: "G-PZJQWDKHVE"
+};
 
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
@@ -329,7 +314,12 @@ import { doc, setDoc,collection,addDoc,getFirestore } from "https://www.gstatic.
 const db = getFirestore(app);
 
         function sendToFirebase() {
-	    if(!document.getElementById("c-email").value.endsWith('@gmail.com')){
+const validateEmail = (email) => {
+  return email.match(
+    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  );
+};
+	    if( validateEmail(document.getElementById("c-email").value) == null ){
 		document.getElementById("error").innerText = '*Please enter a valid email';
 	        return;	
 	    }
@@ -344,6 +334,6 @@ const db = getFirestore(app);
 document.getElementById('submit').addEventListener('click',sendToFirebase)
 
 </script>
-</body>
 
-</html>
+
+</body></html>
